@@ -40,10 +40,25 @@ class Airplane {
       - Give instances of Person a method `.toString()`:
           + It should return a string with `name` and `age`. Example: "Mary, 50"
   */
-  
+
  class Person {
-    
-  }
+   constructor(name, age) {
+     this.name = name;
+     this.age = age;
+     this.stomach = [];
+   }
+   eat(someFood) {
+     if (this.stomach.length < 10) {
+       this.stomach.push(someFood)
+     }
+   }
+   poop() {
+     this.stomach = [];
+   }
+   toString() {
+     return `${this.name}, ${this.age}`
+   }
+ }
   
   /*
     TASK 2
@@ -112,7 +127,7 @@ class Airplane {
           + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
   */
  class Student {
-     
+  
  }
   
   /*
